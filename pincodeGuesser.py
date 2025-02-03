@@ -8,3 +8,5 @@ possibilities = permutations(numbers)
 
 for i in list(possibilities):
     print(i)
+    
+#permutations of [1234] where 1 occurs twice
