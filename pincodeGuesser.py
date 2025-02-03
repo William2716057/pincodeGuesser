@@ -11,7 +11,12 @@ def process_input(values):
     else:
         return space_add(values)
     
-result = process_input(knowns)
+if knowns.isdigit():
+    result = process_input(knowns)
+else:
+    print("Must be digits!")
+    knowns = input("Enter numbers: ")
+
 numbers = list(map(int, result.split()))
 
 possibilities = permutations(numbers)
