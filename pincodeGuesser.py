@@ -2,8 +2,17 @@ from itertools import permutations
 
 knowns = input("Enter numbers: ")
 
-numbers = list(map(int, knowns.split()))
+def space_add(number):
+    return ' '.join(str(number))
 
+def process_input(values):
+    if ' '  in values:
+        return values
+    else:
+        return space_add(values)
+    
+result = process_input(knowns)
+numbers = list(map(int, result.split()))
 
 possibilities = permutations(numbers)
 
