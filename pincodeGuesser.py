@@ -8,5 +8,13 @@ possibilities = permutations(numbers)
 
 for i in list(possibilities):
     print(i)
-    
-#permutations of [1234] where 1 occurs twice
+
+#know that 1234 have been pressed but code requires 5 numbers 
+#output all permutations where each number repeats once 
+
+numbers.append(numbers[0])  
+
+possibilities2 = set(permutations(numbers))
+
+for i in possibilities2:
+    print(i)
